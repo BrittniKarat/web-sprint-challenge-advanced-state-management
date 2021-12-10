@@ -1,10 +1,9 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect } from "react";
 
 import AddForm from './components/AddForm';
 import SmurfList from './components/SmurfList';
 import Header from './components/Header';
 
-import reducer, { initialState } from "./reducers";
 import { fetchSmurfs } from "./actions";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,11 +12,12 @@ import { connect } from "react-redux";
 // import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 
 const App = (props)=> {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const { isLoading, error } = props;
+ 
+  const { smurfs, isLoading, error } = props;
 
   useEffect(() => {
-    // props.fetchSmurfs();
+    props.fetchSmurfs();
+    console.log('inside effect', smurfs)
   }, [])
 
   if (error) {
@@ -31,7 +31,7 @@ const App = (props)=> {
   return (
     <div className="App">
       <Header />
-
+      {console.log('after render', smurfs)}
       <main>
         <SmurfList/>
         <AddForm/>
@@ -40,15 +40,15 @@ const App = (props)=> {
   );
 }
 
-// const mapToStateProps = (state) => {
-//   return ({
-//     smurfs: state.smurfs,
-//     isLoading: state.isLoading,
-//     error: state.error
-//   })
-// }
+const mapToStateProps = (state) => {
+  return ({
+    smurfs: state.smurfs,
+    isLoading: state.isLoading,
+    error: state.error
+  })
+}
 
-export default (App);
+export default connect(mapToStateProps, { fetchSmurfs })(App);
 
 //Task List:
 //1. Connect the fetchSmurfs actions to the App component.
