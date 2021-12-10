@@ -23,8 +23,7 @@ const SmurfList = (props)=> {
 const mapToStateProps = (state) => {
     return ({
       smurfs: state.smurfs,
-      isLoading: state.isLoading,
-      error: state.error
+      isLoading: state.isLoading
     })
   }
 

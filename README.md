@@ -42,7 +42,7 @@ In this project, you will build the reducer, actions and basic redux connects to
 ```
 
 ## Example Finished Project
-![Example Finished Project](C:\Users\Bunni\Desktop\lambdaprojects\Unit-3\Sprint_2\web-sprint-challenge-advanced-state-management\project_example.gif)
+![Example Finished Project]
 
 ## Project Requirements
 
@@ -124,3 +124,5 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
   - I prefer Redux as it is easy to organize and out of the way of my other code (It doesn't need to be in the return of my components)
+
+* I've hidden an easter egg in this assignment. See if you can find it.
