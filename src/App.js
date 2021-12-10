@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { connect } from "react-redux";
 
 import AddForm from './components/AddForm';
 import SmurfList from './components/SmurfList';
@@ -8,17 +9,16 @@ import { fetchSmurfs } from "./actions";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import { connect } from "react-redux";
+
 // import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 
 const App = (props)=> {
  
-  const { smurfs, isLoading, error } = props;
+  const { isLoading, error, fetchSmurfs } = props;
 
   useEffect(() => {
-    props.fetchSmurfs();
-    console.log('inside effect', smurfs)
-  }, [])
+    fetchSmurfs();
+  }, [fetchSmurfs])
 
   if (error) {
     return <h2> No smurfs for you! {error}</h2>
@@ -31,7 +31,6 @@ const App = (props)=> {
   return (
     <div className="App">
       <Header />
-      {console.log('after render', smurfs)}
       <main>
         <SmurfList/>
         <AddForm/>
@@ -42,7 +41,6 @@ const App = (props)=> {
 
 const mapToStateProps = (state) => {
   return ({
-    smurfs: state.smurfs,
     isLoading: state.isLoading,
     error: state.error
   })

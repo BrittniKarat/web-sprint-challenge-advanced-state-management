@@ -29,6 +29,12 @@ const AddForm = (props) => {
                 ...state,
                 id: Date.now()
             });
+            setState({
+                name:"",
+                position:"",
+                nickname:"",
+                description:""
+            });
         }
     }
 
