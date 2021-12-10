@@ -55,9 +55,9 @@ In this project, you will build the reducer, actions and basic redux connects to
       - a string indicating a possible error message
 
   * [x ] Add in the arguments needed to complete a standard reducer function.
-  * [ ] Add in a reducer case to accommodate the start of a smurf fetch.
-  * [ ] Add in a reducer case to accommodate the successful smurf api fetch.
-  * [ ] Add in a reducer cases to accommodate an error.
+  * [x ] Add in a reducer case to accommodate the start of a smurf fetch.
+  * [x ] Add in a reducer case to accommodate the successful smurf api fetch.
+  * [x ] Add in a reducer cases to accommodate an error.
   * [ ] Add in a reducer case to accommodate adding a smurf (including the name, nickname, position, description and an internally generated id) into your smurf list.
   * [ ] Add in a reducer case that adds in a value to the error message.
 
@@ -69,7 +69,7 @@ In this project, you will build the reducer, actions and basic redux connects to
 
   * [ ] Add a thunk action called fetchSmurfs that triggers a loading status display in our application, performs an axios call to retrieve all smurfs from the api. Save the result of to our state and show an error if one is made.
   * [ ] Add a standard action that allows us to add new smurf (including the name, nickname, position, summary).
-  * [ ] Add a standard action that allows us to set the value of the error message slice of state.
+  * [ ] Add a standard action that allows us to set the value of the error message slice of state.[]
   
 ### Complete App.js
   Connect component to the fetchSmurfs action.
@@ -102,10 +102,10 @@ In this project, you will build the reducer, actions and basic redux connects to
 * Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
 
 ## Submission format
-* [ ] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
-* [ ] Check Codegrade before the deadline to compare its results against your local tests.
-* [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
-* [ ] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
+* [x ] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
+* [x ] Check Codegrade before the deadline to compare its results against your local tests.
+* [x ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
+* [x ] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
 
 ## Interview Questions
 
